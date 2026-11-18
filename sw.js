@@ -1,6 +1,6 @@
 // Cambia este número cada vez que publiques una versión nueva,
 // para que los usuarios reciban los archivos actualizados.
-const VERSION = 'v3';
+const VERSION = 'v4';
 const SHELL_CACHE = `energia-calc-shell-${VERSION}`;
 const FONT_CACHE = 'energia-calc-fonts';
 
@@ -21,7 +21,8 @@ const APP_SHELL = [
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(SHELL_CACHE)
-      .then((cache) => cache.addAll(APP_SHELL))
+      // cache: 'reload' evita copiar archivos viejos de la caché del navegador o de GitHub.
+      .then((cache) => cache.addAll(APP_SHELL.map((url) => new Request(url, { cache: 'reload' }))))
       .then(() => self.skipWaiting())
   );
 });
