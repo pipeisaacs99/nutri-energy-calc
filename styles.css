@@ -25,12 +25,10 @@ button { cursor: pointer; }
 .topbar { height: 76px; display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(22px, 5vw, 76px); border-bottom: 1px solid rgba(16, 35, 42, .11); background: rgba(244, 245, 239, .92); }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-size: 17px; letter-spacing: -.04em; }
 .brand strong { font-weight: 800; }
-.brand-mascot-wrap { position: relative; display: inline-grid; place-items: center; width: 31px; height: 31px; overflow: visible; border-radius: 50%; background: #f48fb1; box-shadow: 0 0 0 3px rgba(244, 143, 177, .2); transform: rotate(-5deg); }
-.brand-mascot-wrap::after { content: ''; position: absolute; right: -5px; top: -3px; width: 7px; height: 7px; border-radius: 50%; background: #f7b6cb; box-shadow: 7px 6px 0 -2px #f48fb1; }
-.brand-mascot { position: relative; z-index: 1; width: 29px; height: 29px; object-fit: contain; }
-.brand-mascot-wrap.small { width: 25px; height: 25px; box-shadow: 0 0 0 2px rgba(244, 143, 177, .2); }
-.brand-mascot-wrap.small .brand-mascot { width: 23px; height: 23px; }
-.brand-mascot-wrap.small::after { width: 5px; height: 5px; right: -4px; top: -2px; box-shadow: 5px 5px 0 -2px #f48fb1; }
+.brand-mascot-wrap { position: relative; display: inline-grid; place-items: center; width: 40px; height: 40px; flex: none; }
+.brand-mascot { display: block; width: 40px; height: 40px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(244, 143, 177, .35)); }
+.brand-mascot-wrap.small { width: 30px; height: 30px; }
+.brand-mascot-wrap.small .brand-mascot { width: 30px; height: 30px; }
 .brand-mark { width: 27px; height: 27px; border-radius: 8px; display: inline-flex; align-items: flex-end; justify-content: center; gap: 2px; padding: 6px 6px 5px; background: var(--teal); transform: rotate(-8deg); }
 .brand-mark span { display: block; width: 3px; border-radius: 3px; background: var(--mint); }
 .brand-mark span:nth-child(1) { height: 7px; opacity: .72; }.brand-mark span:nth-child(2) { height: 12px; }.brand-mark span:nth-child(3) { height: 9px; opacity: .85; }

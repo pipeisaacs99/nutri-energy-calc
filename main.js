@@ -72,9 +72,9 @@ const app = document.querySelector('#app');
 
 app.innerHTML = `
   <header class="topbar">
-    <a class="brand" href="#top" aria-label="Energía Calc, inicio">
-      <span class="brand-mascot-wrap"><img class="brand-mascot" src="./icons/logo.svg" alt="Nutria atleta de Energía Calc" /></span>
-      <span>Energía <strong>Calc</strong></span>
+    <a class="brand" href="#top" aria-label="Nutri Energy Calc, inicio">
+      <span class="brand-mascot-wrap"><img class="brand-mascot" src="./icons/mascota.png" alt="Nutria atleta de Nutri Energy Calc" /></span>
+      <span>Nutri Energy <strong>Calc</strong></span>
     </a>
     <div class="topbar-note"><span class="live-dot"></span> Estimación orientativa · adultos</div>
   </header>
@@ -240,7 +240,7 @@ app.innerHTML = `
     </section>
 
     <footer class="site-footer">
-      <div class="footer-brand"><span class="brand-mascot-wrap small"><img class="brand-mascot" src="./icons/logo.svg" alt="" /></span><strong>Energía Calc</strong></div>
+      <div class="footer-brand"><span class="brand-mascot-wrap small"><img class="brand-mascot" src="./icons/mascota.png" alt="" /></span><strong>Nutri Energy Calc</strong></div>
       <p>Estimación educativa para adultos · No sustituye valoración profesional.</p>
       <details><summary>Fuentes y fórmulas</summary><div class="sources"><a href="https://reference.medscape.com/calculator/846/mifflin-st-jeor-equation-calculator" target="_blank" rel="noreferrer">Mifflin–St Jeor · Medscape / QxMD</a><a href="https://impact.chp.gov.hk/calculator_11_1.php" target="_blank" rel="noreferrer">Peso ideal y ajustado · IMPACT / Department of Health</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3636460/" target="_blank" rel="noreferrer">Rango de actividad física · Frontiers in Physiology / NCBI</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2117006/" target="_blank" rel="noreferrer">Proteína 1,4–2,0 g/kg · ISSN / NCBI</a><a href="https://www.ncbi.nlm.nih.gov/books/NBK610333/" target="_blank" rel="noreferrer">Rangos aceptables de macronutrientes · National Academies / NCBI</a></div></details>
     </footer>
@@ -520,7 +520,7 @@ document.querySelector('#download-button').addEventListener('click', () => {
   const values = state.lastCalculation;
   const sexLabel = values.sex === 'male' ? 'Hombre' : 'Mujer';
   const lines = [
-    'ENERGÍA CALC · RESUMEN DE RESULTADOS',
+    'NUTRI ENERGY CALC · RESUMEN DE RESULTADOS',
     `Generado: ${new Intl.DateTimeFormat('es-ES', { dateStyle: 'long', timeStyle: 'short' }).format(new Date())}`,
     '',
     'DATOS DE ENTRADA',
@@ -556,7 +556,7 @@ document.querySelector('#download-button').addEventListener('click', () => {
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = url;
-  link.download = 'energia-calc-resumen.txt';
+  link.download = 'nutri-energy-calc-resumen.txt';
   document.body.appendChild(link);
   link.click();
   link.remove();

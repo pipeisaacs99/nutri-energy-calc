@@ -1,6 +1,6 @@
 // Cambia este número cada vez que publiques una versión nueva,
 // para que los usuarios reciban los archivos actualizados.
-const VERSION = 'v2';
+const VERSION = 'v3';
 const SHELL_CACHE = `energia-calc-shell-${VERSION}`;
 const FONT_CACHE = 'energia-calc-fonts';
 
@@ -10,7 +10,7 @@ const APP_SHELL = [
   './styles.css',
   './main.js',
   './manifest.webmanifest',
-  './icons/logo.svg',
+  './icons/mascota.png',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/icon-maskable-512.png',
